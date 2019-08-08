@@ -40,6 +40,10 @@ To install the core BAL module as well as dependencies for the example, run:
 pip install .[examples]
 ```
 
+The BAL package can also be installed from PyPi with the following command:
+```
+pip install bal
+```
 
 
 ## Concepts
