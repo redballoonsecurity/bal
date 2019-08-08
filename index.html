@@ -1,0 +1,549 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to BAL’s documentation! &mdash; RBS BAL  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="bal" href="bal.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> RBS BAL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="bal.html">bal</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">RBS BAL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Welcome to BAL’s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-bal-s-documentation">
+<h1>Welcome to BAL’s documentation!<a class="headerlink" href="#welcome-to-bal-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bal.html">bal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bal.analyzers.html">bal.analyzers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bal.analyzers.html#module-bal.analyzers.visualizer_analyzer">bal.analyzers.visualizer_analyzer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bal.html#module-bal.context">bal.context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bal.html#module-bal.context_ioc">bal.context_ioc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bal.html#module-bal.data_model">bal.data_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bal.html#module-bal.data_object">bal.data_object</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="binary-abstraction-layer-bal">
+<h1>Binary Abstraction Layer (BAL)<a class="headerlink" href="#binary-abstraction-layer-bal" title="Permalink to this headline">¶</a></h1>
+<p>The Binary Abstraction Layer (BAL) package is a tiny framework for analyzing and manipulating
+binary data.
+Its guiding principle is that a tree is a natural representation for binary data.
+For example a firmware may look as follow:</p>
+<ul class="simple">
+<li><p>Zip Data</p>
+<ul>
+<li><p>ELF</p>
+<ul>
+<li><p>Header</p></li>
+<li><p>Code</p></li>
+<li><p>Data</p></li>
+</ul>
+</li>
+<li><p>Images</p></li>
+<li><p>Config</p></li>
+</ul>
+</li>
+</ul>
+<p>It defines 3 broad categories of operations on the tree: <strong>convert</strong>, <strong>analyze</strong> and <strong>modify</strong>.</p>
+<ul class="simple">
+<li><p><em>Converters</em> handle serializing and deserializing binary data.</p></li>
+<li><p><em>Analyzers</em> handle extracting information from the tree representation.</p></li>
+<li><p><em>Modifiers</em> handle arbitrary modification of the binary.</p></li>
+</ul>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>To install the BAL module from the repository, clone the repo and run:</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="p">.</span>
+</pre></div>
+</div>
+<p>To install the BAL package and generate a local copy of its documentation, run:</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="p">.[</span><span class="n">docs</span><span class="p">]</span>
+<span class="n">make</span> <span class="n">html</span><span class="o">-</span><span class="n">docs</span>
+</pre></div>
+</div>
+<p>To install the core BAL module as well as dependencies for the example, run:</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="p">.[</span><span class="n">examples</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="concepts">
+<h2>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<p>Each node in the tree is represented as a <code class="docutils literal notranslate"><span class="pre">DataObject</span></code>.
+A <code class="docutils literal notranslate"><span class="pre">DataObject</span></code> can wrap either an unstructured string of raw binary data or a <code class="docutils literal notranslate"><span class="pre">DataModel</span></code> (or both).
+A <code class="docutils literal notranslate"><span class="pre">DataModel</span></code> is an abstract class defining some sort of structured data.
+The <code class="docutils literal notranslate"><span class="pre">DataModel</span></code> is created when deserializing raw binary data.
+It fits the typical definition of data model.</p>
+<p>In addition, the BAL framework defines a few interfaces:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bal.context_ioc.AbstractConverter</span></code> A converter takes care of unpacking bytes into a <code class="docutils literal notranslate"><span class="pre">DataModel</span></code>
+(i.e. deserializing) and packing its <code class="docutils literal notranslate"><span class="pre">DataModel</span></code> into bytes (i.e. serializing). Its method
+signatures are inflexible so that they may be called directly by the <code class="docutils literal notranslate"><span class="pre">DataObject</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bal.context_ioc.AbstractModifier</span></code> A modifier updates the content of any node within the tree.
+It may modify the packed or unpacked data. It contains a single <code class="docutils literal notranslate"><span class="pre">modify()</span></code> method with an
+undefined signature. It may walk the entire tree, unpacking on the way.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bal.context_ioc.AbstractAnalyzer</span></code> An analyzer extracts data from a tree. The type of
+the returned data is defined by the concrete analyzer implementation. It contains a single
+<code class="docutils literal notranslate"><span class="pre">analyze()</span></code> method with an undefined signature. It may walk the entire tree, unpacking on the way.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bal.context_ioc.BALIocContext</span></code> The IoC context provides a simple implementation of the
+<a class="reference external" href="https://en.wikipedia.org/wiki/Inversion_of_control">Inversion of Control</a> pattern. It looks up
+the implementation of a given interface and returns a new instance. It is used to instantiate
+an <code class="docutils literal notranslate"><span class="pre">AbstractConverter</span></code>, <code class="docutils literal notranslate"><span class="pre">AbstractModifier</span></code> or <code class="docutils literal notranslate"><span class="pre">AbstractAnalyzer</span></code>.</p>
+<ul>
+<li><p>For <code class="docutils literal notranslate"><span class="pre">AbstractModifier</span></code>s and <code class="docutils literal notranslate"><span class="pre">AbstractAnalyzer</span></code>s, an interface extending the <code class="docutils literal notranslate"><span class="pre">AbstractModifier</span></code> or <code class="docutils literal notranslate"><span class="pre">AbstractAnalyzer</span></code> is supplied and an implementation of the interface is returned.</p></li>
+<li><p>For <code class="docutils literal notranslate"><span class="pre">AbstractConverters</span></code>, an interface extending <code class="docutils literal notranslate"><span class="pre">DataModel</span></code> is supplied and an <code class="docutils literal notranslate"><span class="pre">AbstractConverter</span></code> implementation will be returned. This implementation’s <code class="docutils literal notranslate"><span class="pre">pack()</span></code> method will create an instance of the supplied <code class="docutils literal notranslate"><span class="pre">DataModel</span></code> interface, and its <code class="docutils literal notranslate"><span class="pre">unpack()</span></code> method will serialize an instance of the supplied <code class="docutils literal notranslate"><span class="pre">DataModel</span></code> interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bal.context_ioc.BALIoCContextFactory</span></code> Creates a configured instance of the <code class="docutils literal notranslate"><span class="pre">BALIoCContext</span></code>. It
+provides methods for the user to register the implementation of interfaces.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bal.context.BALContext</span></code> A new context is created for each tree. It inherits from the
+<code class="docutils literal notranslate"><span class="pre">BALIoCContext</span></code>. The context contains a reference to the root <code class="docutils literal notranslate"><span class="pre">DataObject</span></code>. It may be used as
+a cache for analyzers that are either expensive or frequently called. It may also be used to
+store data that does not fit cleanly into a tree (for example relationships between unrelated
+nodes).</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bal.context.BALContextFactory</span></code> As implied, it is responsible for creating a <code class="docutils literal notranslate"><span class="pre">BALContext</span></code>. The
+factory is a good place to load external configuration that will be passed to the context. In
+most settings, the factory would be created when the application starts and destroyed when it
+dies.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bal.context.BALManager</span></code> The BAL manager offers a way to look up factories using a key. It is
+not strictly necessary, and should only be used in applications that need to dynamically retrieve multiple different
+context factories</p></li>
+</ul>
+<dl class="simple">
+<dt>The full documentation for the API is available on</dt><dd><p><a class="reference external" href="https://ballon-rouge.github.io/bal/">github.io</a></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="guide">
+<h2>Guide<a class="headerlink" href="#guide" title="Permalink to this headline">¶</a></h2>
+<p>All the code for this guide is contained in the <a class="reference external" href="./example">./example</a> folder.</p>
+<p>The first step is to declare a new <code class="docutils literal notranslate"><span class="pre">DataModel</span></code> class that defines the data structure for the root
+node and its children.
+For example, a Xilinx bitstream has 3 children: the header, a sync marker and the config packets.
+The format of the header is not known, the sync marker does not have a format and the packets
+are an array of unknown data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">XilinxPacketsInterface</span><span class="p">(</span><span class="n">DataModel</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An array of Xilinx register configuration packets.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">XilinxBitstreamHeaderInterface</span><span class="p">(</span><span class="n">DataModel</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Xilinx bitstream header contains unknown information.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="k">class</span>  <span class="nc">XilinxBitstreamSyncMarkerInterface</span><span class="p">(</span><span class="n">DataModel</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Xilinx bitstream sync marker</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">XilinxBitstream</span><span class="p">(</span><span class="n">ClassModel</span><span class="p">[</span><span class="n">DataObject</span><span class="p">]):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The root model for a Xilinx bitstream. It contains data objects for a header, sync marker, and packets.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">header</span><span class="p">,</span>
+            <span class="n">sync_marker</span><span class="p">,</span>
+            <span class="n">packets</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param DataObject[XilinxBitstreamHeaderInterface] header:</span>
+<span class="sd">        :param DataObject[XilinxBitstreamSyncMarker] sync_marker:</span>
+<span class="sd">        :param DataObject[XilinxPackets] packets:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">XilinxBitstream</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">((</span>
+            <span class="p">(</span><span class="s2">&quot;header&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_header</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;sync_marker&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sync_marker</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;packets&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_packets</span><span class="p">),</span>
+        <span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="n">header</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sync_marker</span> <span class="o">=</span> <span class="n">sync_marker</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">packets</span> <span class="o">=</span> <span class="n">packets</span>
+
+    <span class="k">def</span> <span class="nf">get_header</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span>
+
+    <span class="k">def</span> <span class="nf">get_sync_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sync_marker</span>
+
+    <span class="k">def</span> <span class="nf">get_packets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">packets</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>It is important to notice that even though the structure of the children is unknown, an interface</dt><dd><p>is still created for them. As we will see later, it allows an external developer to later define
+their format as well as their converters.</p>
+</dd>
+</dl>
+<p>Now that we have the models, we are ready to create the root converter:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">XilinxBitstreamConverter</span><span class="p">(</span><span class="n">AbstractConverter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converter for a Xilinx FPGA bitstream</span>
+
+<span class="sd">    :param BALContext context: The BAL context.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">XilinxBitstreamConverter</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span> <span class="o">=</span> <span class="n">context</span>
+
+    <span class="k">def</span> <span class="nf">unpack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_bytes</span><span class="p">):</span>
+        <span class="n">sync_marker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">format</span><span class="o">.</span><span class="n">sync_word</span>
+        <span class="n">sync_marker_index</span> <span class="o">=</span> <span class="n">data_bytes</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">sync_marker</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">sync_marker_index</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> \
+            <span class="s2">&quot;The sync marker is not present in the provided bitstream data&quot;</span>
+
+        <span class="k">assert</span> <span class="n">sync_marker_index</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">sync_marker</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_bytes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> \
+            <span class="s2">&quot;The configuration data is expected to contain at least one word size worth of data&quot;</span>
+
+        <span class="k">return</span> <span class="n">XilinxBitstream</span><span class="p">(</span>
+            <span class="n">DataObject</span><span class="o">.</span><span class="n">create_packed</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">,</span>
+                <span class="n">data_bytes</span><span class="p">[:</span><span class="n">sync_marker_index</span><span class="p">],</span>
+                <span class="n">XilinxBitstreamHeaderInterface</span>
+            <span class="p">),</span>
+            <span class="n">DataObject</span><span class="o">.</span><span class="n">create_packed</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">,</span>
+                <span class="n">data_bytes</span><span class="p">[</span><span class="n">sync_marker_index</span><span class="p">:</span><span class="n">sync_marker_index</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">sync_marker</span><span class="p">)],</span>
+                <span class="n">XilinxBitstreamSyncMarkerInterface</span><span class="p">,</span>
+            <span class="p">),</span>
+            <span class="n">DataObject</span><span class="o">.</span><span class="n">create_packed</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">,</span>
+                <span class="n">data_bytes</span><span class="p">[</span><span class="n">sync_marker_index</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">sync_marker</span><span class="p">):],</span>
+                <span class="n">XilinxPacketsInterface</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">pack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_model</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param XilinxBitstream data_model:</span>
+<span class="sd">        :rtype: bytes</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data_model</span><span class="p">,</span> <span class="n">XilinxBitstream</span><span class="p">)</span>
+        <span class="k">return</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span>
+            <span class="n">data_model</span><span class="o">.</span><span class="n">get_header</span><span class="p">()</span><span class="o">.</span><span class="n">pack</span><span class="p">(),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">format</span><span class="o">.</span><span class="n">sync_word</span><span class="p">,</span>
+            <span class="n">data_model</span><span class="o">.</span><span class="n">get_packets</span><span class="p">()</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+        <span class="p">])</span>
+</pre></div>
+</div>
+<p>This is already getting a bit more complicated.
+The converter takes a <code class="docutils literal notranslate"><span class="pre">BALContext</span></code> as an argument which implies that a converter instance must be
+dedicated to a specific bitstream.
+The <code class="docutils literal notranslate"><span class="pre">unpack()</span></code> method does not instantiate any of its children <code class="docutils literal notranslate"><span class="pre">DataModel</span></code>, it only creates a
+<code class="docutils literal notranslate"><span class="pre">DataObject</span></code> that wraps the packed data for that model.
+It provides the <code class="docutils literal notranslate"><span class="pre">DataObject</span></code> with the interface of the wrapped data model.
+The <code class="docutils literal notranslate"><span class="pre">DataObject</span></code> uses the interface to extract basic information about the packed data (i.e. type
+and description from the interface name and its docstring).
+It uses the interface when it is unpacked as well, looking up a converter implementation for that
+interface inside the <code class="docutils literal notranslate"><span class="pre">BALContext</span></code> (remember that it inherits from the <code class="docutils literal notranslate"><span class="pre">BALIoCContext</span></code>).
+This is an important property as it allows the tree to be “lazily” unpacked.
+The user controls  exactly when a given child is unpacked (if it gets unpacked at all) which can
+lead to significantly better performances in many use cases.</p>
+<p>Last but not least, we need a <code class="docutils literal notranslate"><span class="pre">BALContext</span></code> and <code class="docutils literal notranslate"><span class="pre">BALFactoryContext</span></code> implementation:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">XilinxContext</span><span class="p">(</span><span class="n">BALContext</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    :param Dict[Type[DataModel],Type[AbstractConverter]] converters_by_type:</span>
+<span class="sd">    :param Dict[Type[AnalyzerInterface],Type[AbstractAnalyzer]] analyzers_by_type:</span>
+<span class="sd">    :param Dict[Type[ModifierInterface],Type[AbstractModifier]] modifiers_by_type:</span>
+<span class="sd">    :param bytes bytes: The bytes making up the bitstream.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">converters_by_type</span><span class="p">,</span>
+            <span class="n">analyzers_by_type</span><span class="p">,</span>
+            <span class="n">modifiers_by_type</span><span class="p">,</span>
+            <span class="nb">bytes</span>
+    <span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">XilinxContext</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">converters_by_type</span><span class="p">,</span>
+            <span class="n">analyzers_by_type</span><span class="p">,</span>
+            <span class="n">modifiers_by_type</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bitstream</span> <span class="o">=</span> <span class="n">DataObject</span><span class="o">.</span><span class="n">create_packed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">XilinxBitstream</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :rtype: DataObject[XilinxBitstream]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bitstream</span>
+
+
+<span class="k">class</span> <span class="nc">XilinxContextFactory</span><span class="p">(</span><span class="n">BALContextFactory</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">XilinxContextFactory</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param bytes bytes: The bytes for the Xilinx FPGA bitstream</span>
+<span class="sd">        :rtype: XilinxContext</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">XilinxContext</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_converters_by_type</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_analyzers_by_type</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_modifiers_by_type</span><span class="p">,</span>
+            <span class="n">data</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+<p>Since our Xilinx implementation is pretty limited, both the context and its factory are trivial.</p>
+<p>Let’s see our implementation in action:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">wget</span>
+
+<span class="n">context_factory</span> <span class="o">=</span> <span class="n">XilinxContextFactory</span><span class="p">()</span>
+<span class="c1"># Register the XilinxBitsreamConverter</span>
+<span class="n">context_factory</span><span class="o">.</span><span class="n">register_converter</span><span class="p">(</span><span class="n">XilinxBitstream</span><span class="p">,</span> <span class="n">XilinxBitstreamConverter</span><span class="p">)</span>
+<span class="n">lx9_bin</span> <span class="o">=</span> <span class="n">wget</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;https://redballoonsecurity.com/files/JwfEU4veQSNFao8h/lx9.bin&#39;</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">lx9_bin</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">context</span> <span class="o">=</span> <span class="n">context_factory</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">bitstream_object</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Bitstream object: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bitstream_object</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Bitstream model type: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bitstream_object</span><span class="o">.</span><span class="n">get_model_type</span><span class="p">()))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Bitstream model description: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bitstream_object</span><span class="o">.</span><span class="n">get_model_description</span><span class="p">()))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">UNPACKING</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">bitstream_object</span><span class="o">.</span><span class="n">unpack</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Bitstream object: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bitstream_object</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">HEADER</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">header_object</span> <span class="o">=</span> <span class="n">bitstream_object</span><span class="o">.</span><span class="n">get_model</span><span class="p">()</span><span class="o">.</span><span class="n">get_header</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Bitstream header object: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">header_object</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Bitstream header model type: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">header_object</span><span class="o">.</span><span class="n">get_model_type</span><span class="p">()))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Bitstream header model description: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">header_object</span><span class="o">.</span><span class="n">get_model_description</span><span class="p">()))</span>
+</pre></div>
+</div>
+<p>This script should print:</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>Bitstream object: PackedXilinxBitstream(340604)
+Bitstream model type: XilinxBitstream
+Bitstream model description: The root model for a Xilinx bitstream. It contains a header and packets data objects.
+
+UNPACKING
+
+Bitstream object: XilinxBitstream({
+  header: PackedXilinxBitstreamHeaderInterface(16),
+  sync_marker: PackedXilinxBitstreamSyncMarkerInterface(4),
+  packets: PackedXilinxPacketsInterface(340584),
+})
+
+HEADER
+
+Bitstream header object: PackedXilinxBitstreamHeaderInterface(16)
+Bitstream header model type: XilinxBitstreamHeaderInterface
+Bitstream header model description: The Xilinx bitstream header contains unknown information.
+</pre></div>
+</div>
+<p>As you can see from the output, the BAL framework already has a bunch of information about the
+structure of the bitstream.
+It uses the docstring defined on the interfaces to pull a description of the data models, even if
+they cannot be unpacked yet.</p>
+<p>This is it for this guide.
+Your next steps might be to implement the XilinxPacketsInterface, XilinxBitstreamHeaderInterface,
+and XilinxBitstreamSyncMarkerInterface interfaces and implement their respective converters.
+If you want to learn more about writing a full chain of converters, analyzers and modifiers,
+head over to the <a class="reference external" href="https://github.com/RedBalloonShenanigans/bal-xilinx">bal-xilinx</a> project.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bal.html" class="btn btn-neutral float-right" title="bal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, RBS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

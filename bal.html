@@ -1,0 +1,1042 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>bal &mdash; RBS BAL  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="bal.analyzers" href="bal.analyzers.html" />
+    <link rel="prev" title="Welcome to BAL’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> RBS BAL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">bal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bal.analyzers.html">bal.analyzers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bal.context">bal.context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bal.context_ioc">bal.context_ioc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bal.data_model">bal.data_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bal.data_object">bal.data_object</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RBS BAL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>bal</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/bal.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bal">
+<h1>bal<a class="headerlink" href="#bal" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bal.analyzers.html">bal.analyzers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bal.analyzers.html#module-bal.analyzers.visualizer_analyzer">bal.analyzers.visualizer_analyzer</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="module-bal.context">
+<span id="bal-context"></span><h2>bal.context<a class="headerlink" href="#module-bal.context" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bal.context.BALContext">
+<em class="property">class </em><code class="sig-prename descclassname">bal.context.</code><code class="sig-name descname">BALContext</code><span class="sig-paren">(</span><em class="sig-param">converters_by_type</em>, <em class="sig-param">analyzers_by_type</em>, <em class="sig-param">modifiers_by_type</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context.BALContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bal.context_ioc.BALIoCContext" title="bal.context_ioc.BALIoCContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">bal.context_ioc.BALIoCContext</span></code></a></p>
+<p>This class is responsible for instantiating interface implementation (see
+<a class="reference internal" href="#bal.context_ioc.BALIoCContext" title="bal.context_ioc.BALIoCContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">bal.context_ioc.BALIoCContext</span></code></a>) and creating the root data object.</p>
+<dl class="method">
+<dt id="bal.context.BALContext.get_data">
+<em class="property">abstract </em><code class="sig-name descname">get_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.context.BALContext.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data object wrapping the data. The returned object starts out packed but may
+be modified by user call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#bal.data_object.DataObject" title="bal.data_object.DataObject">DataObject</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bal.context.BALContextFactory">
+<em class="property">class </em><code class="sig-prename descclassname">bal.context.</code><code class="sig-name descname">BALContextFactory</code><a class="headerlink" href="#bal.context.BALContextFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bal.context_ioc.BALIoCContextFactory" title="bal.context_ioc.BALIoCContextFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">bal.context_ioc.BALIoCContextFactory</span></code></a></p>
+<p>The BAL context factory is used to create new <a class="reference internal" href="#bal.context.BALContext" title="bal.context.BALContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">BALContext</span></code></a> object for given binary
+data. The factory is used to configure all the created <a class="reference internal" href="#bal.context.BALContext" title="bal.context.BALContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">BALContext</span></code></a>
+throughout the lifetime of the factory.</p>
+<p>This class is abstract and must be implemented for specific families of binary data.</p>
+<dl class="method">
+<dt id="bal.context.BALContextFactory.create">
+<em class="property">abstract </em><code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">bytes</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context.BALContextFactory.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a BAL context from the provided bytes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>bytes</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.7)"><em>bytes</em></a>) – The bytes for the binary data</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bal.context.BALContext" title="bal.context.BALContext">BALContext</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bal.context.BALManager">
+<em class="property">class </em><code class="sig-prename descclassname">bal.context.</code><code class="sig-name descname">BALManager</code><a class="headerlink" href="#bal.context.BALManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Manages multiple <a class="reference internal" href="#bal.context.BALContextFactory" title="bal.context.BALContextFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">BALContextFactory</span></code></a> instances to return the appropriate
+factory based on a user provided key (ie “xilinx”, “altera”).</p>
+<dl class="method">
+<dt id="bal.context.BALManager.register">
+<code class="sig-name descname">register</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">context_factory</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context.BALManager.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register an BAL implementation with the manager</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>Any</em>) – The key associated with the Implementation.</p></li>
+<li><p><strong>context_factory</strong> (<a class="reference internal" href="#bal.context.BALContextFactory" title="bal.context.BALContextFactory"><em>BALContextFactory</em></a>) – An BAL implementation instance.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.context.BALManager.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context.BALManager.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the context factory registered for the provided key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> (<em>Any</em>) – The key associated with the context factory.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bal.context.BALContextFactory" title="bal.context.BALContextFactory">BALContextFactory</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bal.context_ioc">
+<span id="bal-context-ioc"></span><h2>bal.context_ioc<a class="headerlink" href="#module-bal.context_ioc" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bal.context_ioc.AbstractAnalyzer">
+<em class="property">class </em><code class="sig-prename descclassname">bal.context_ioc.</code><code class="sig-name descname">AbstractAnalyzer</code><span class="sig-paren">(</span><em class="sig-param">context</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context_ioc.AbstractAnalyzer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Analyze binary data to extract information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context</strong> (<a class="reference internal" href="#bal.context_ioc.BALIoCContext" title="bal.context_ioc.BALIoCContext"><em>BALIoCContext</em></a>) – The BAL context that can be read/modified by the analyzer.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="bal.context_ioc.AbstractAnalyzer.analyze">
+<em class="property">abstract </em><code class="sig-name descname">analyze</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context_ioc.AbstractAnalyzer.analyze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform the analysis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bal.context_ioc.AbstractConverter">
+<em class="property">class </em><code class="sig-prename descclassname">bal.context_ioc.</code><code class="sig-name descname">AbstractConverter</code><span class="sig-paren">(</span><em class="sig-param">context</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context_ioc.AbstractConverter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Converts bytes to data model and vice-versa. It is instantiated by the BAL context.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context</strong> (<a class="reference internal" href="#bal.context_ioc.BALIoCContext" title="bal.context_ioc.BALIoCContext"><em>BALIoCContext</em></a>) – The BAL context that can be read/modified by the converter.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="bal.context_ioc.AbstractConverter.unpack">
+<em class="property">abstract </em><code class="sig-name descname">unpack</code><span class="sig-paren">(</span><em class="sig-param">data_bytes</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context_ioc.AbstractConverter.unpack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deserialize a model from bytes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_bytes</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.7)"><em>bytes</em></a>) – The data to unpack</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bal.data_model.DataModel" title="bal.data_model.DataModel">DataModel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.context_ioc.AbstractConverter.pack">
+<em class="property">abstract </em><code class="sig-name descname">pack</code><span class="sig-paren">(</span><em class="sig-param">data_model</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context_ioc.AbstractConverter.pack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize a model to bytes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_model</strong> (<a class="reference internal" href="#bal.data_model.DataModel" title="bal.data_model.DataModel"><em>DataModel</em></a>) – The model to pack</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.7)">bytes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bal.context_ioc.AbstractModifier">
+<em class="property">class </em><code class="sig-prename descclassname">bal.context_ioc.</code><code class="sig-name descname">AbstractModifier</code><span class="sig-paren">(</span><em class="sig-param">context</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context_ioc.AbstractModifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Modifies binary data. It is instantiated by the BAL context.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context</strong> (<a class="reference internal" href="#bal.context_ioc.BALIoCContext" title="bal.context_ioc.BALIoCContext"><em>BALIoCContext</em></a>) – The BAL context that can be used by the converter.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="bal.context_ioc.AbstractModifier.modify">
+<em class="property">abstract </em><code class="sig-name descname">modify</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context_ioc.AbstractModifier.modify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform the modification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bal.context_ioc.BALIoCContext">
+<em class="property">class </em><code class="sig-prename descclassname">bal.context_ioc.</code><code class="sig-name descname">BALIoCContext</code><span class="sig-paren">(</span><em class="sig-param">converters_by_type</em>, <em class="sig-param">analyzers_by_type</em>, <em class="sig-param">modifiers_by_type</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context_ioc.BALIoCContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A IoC Interface implementation is responsible for instantiating the appropriate
+implementation of converters, analyzers, and modifiers. The context may store
+extra information extracted from the binary data and/or config data used to unpack the
+binary data.
+A new context is instantiated for each binary data instance.</p>
+<p>It provides basic <a class="reference external" href="https://en.wikipedia.org/wiki/Inversion_of_control">IoC</a> for
+converters, analyzers and modifiers by holding a mapping of interfaces to implementation.
+This mapping should not be configured on the <code class="xref py py-class docutils literal notranslate"><span class="pre">BALContext</span></code> directly, it should be
+configured on the <code class="xref py py-class docutils literal notranslate"><span class="pre">BALContextFactory</span></code>. Code that requests a new
+converter/analyzer/modifier instance can rely on knowing just the interface while the actual
+implementation can be defined at run time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>converters_by_type</strong> (<em>Dict</em><em>[</em><em>Type</em><em>[</em><a class="reference internal" href="#bal.data_model.DataModel" title="bal.data_model.DataModel"><em>DataModel</em></a><em>]</em><em>,</em><em>Type</em><em>[</em><a class="reference internal" href="#bal.context_ioc.AbstractConverter" title="bal.context_ioc.AbstractConverter"><em>AbstractConverter</em></a><em>]</em><em>]</em>) – The converter
+interfaces mapped to their implementation.</p></li>
+<li><p><strong>analyzers_by_type</strong> (<em>Dict</em><em>[</em><em>Type</em><em>[</em><a class="reference internal" href="#bal.context_ioc.AbstractAnalyzer" title="bal.context_ioc.AbstractAnalyzer"><em>AbstractAnalyzer</em></a><em>]</em><em>,</em><em>Type</em><em>[</em><a class="reference internal" href="#bal.context_ioc.AbstractAnalyzer" title="bal.context_ioc.AbstractAnalyzer"><em>AbstractAnalyzer</em></a><em>]</em><em>]</em>) – The analyzer
+interfaces mapped to their implementation.</p></li>
+<li><p><strong>modifiers_by_type</strong> (<em>Dict</em><em>[</em><em>Type</em><em>[</em><a class="reference internal" href="#bal.context_ioc.AbstractModifier" title="bal.context_ioc.AbstractModifier"><em>AbstractModifier</em></a><em>]</em><em>,</em><em>Type</em><em>[</em><a class="reference internal" href="#bal.context_ioc.AbstractModifier" title="bal.context_ioc.AbstractModifier"><em>AbstractModifier</em></a><em>]</em><em>]</em>) – The modifier
+interfaces mapped to their implementation.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="bal.context_ioc.BALIoCContext.create_converter">
+<code class="sig-name descname">create_converter</code><span class="sig-paren">(</span><em class="sig-param">TargetDataModelType</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context_ioc.BALIoCContext.create_converter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a converter instance that implements the provided interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>TargetDataModelType</strong> (<em>Type</em><em>[</em><a class="reference internal" href="#bal.data_model.DataModel" title="bal.data_model.DataModel"><em>DataModel</em></a><em>]</em>) – The interface of the data module converted by the converter.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Optional[<a class="reference internal" href="#bal.context_ioc.AbstractConverter" title="bal.context_ioc.AbstractConverter">AbstractConverter</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.context_ioc.BALIoCContext.create_analyzer">
+<code class="sig-name descname">create_analyzer</code><span class="sig-paren">(</span><em class="sig-param">AnalyzerType</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context_ioc.BALIoCContext.create_analyzer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an analyzer instance that implements the provided interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>AnalyzerType</strong> (<em>Type</em><em>[</em><a class="reference internal" href="#bal.context_ioc.AbstractAnalyzer" title="bal.context_ioc.AbstractAnalyzer"><em>AbstractAnalyzer</em></a><em>]</em>) – The interface of the requested analyzer.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Optional[<a class="reference internal" href="#bal.context_ioc.AbstractAnalyzer" title="bal.context_ioc.AbstractAnalyzer">AbstractAnalyzer</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.context_ioc.BALIoCContext.create_modifier">
+<code class="sig-name descname">create_modifier</code><span class="sig-paren">(</span><em class="sig-param">ModifierType</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context_ioc.BALIoCContext.create_modifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a modifier instance of the provided type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ModifierType</strong> (<em>Type</em><em>[</em><a class="reference internal" href="#bal.context_ioc.AbstractModifier" title="bal.context_ioc.AbstractModifier"><em>AbstractModifier</em></a><em>]</em>) – The interface of the requested modifier.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Optional[<a class="reference internal" href="#bal.context_ioc.AbstractModifier" title="bal.context_ioc.AbstractModifier">AbstractModifier</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bal.context_ioc.BALIoCContextFactory">
+<em class="property">class </em><code class="sig-prename descclassname">bal.context_ioc.</code><code class="sig-name descname">BALIoCContextFactory</code><a class="headerlink" href="#bal.context_ioc.BALIoCContextFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>The BAL IoC context factory is used to create new <a class="reference internal" href="#bal.context_ioc.BALIoCContext" title="bal.context_ioc.BALIoCContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">BALIoCContext</span></code></a> object for a
+given instance of binary data.
+The factory is used to configure all the created
+<a class="reference internal" href="#bal.context_ioc.BALIoCContext" title="bal.context_ioc.BALIoCContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">BALIoCContext</span></code></a> throughout the lifetime of the factory.</p>
+<p>The only configuration taken care of by this abstract class is the mapping of interfaces to
+implementations for analyzers and modifiers, as well as mapping data model interfaces to converter
+implementations which convert each data model interface. The mapping is provided to the
+created context to provide a simple <a class="reference external" href="https://en.wikipedia.org/wiki/Inversion_of_control">IoC</a>
+mechanism.</p>
+<dl class="method">
+<dt id="bal.context_ioc.BALIoCContextFactory.register_converter">
+<code class="sig-name descname">register_converter</code><span class="sig-paren">(</span><em class="sig-param">DataModelInterface</em>, <em class="sig-param">ConverterImplementation</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context_ioc.BALIoCContextFactory.register_converter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a converter implementation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>DataModelInterface</strong> (<em>Type</em><em>[</em><a class="reference internal" href="#bal.data_model.DataModel" title="bal.data_model.DataModel"><em>DataModel</em></a><em>]</em>) – The interface of the data model which</p>
+</dd>
+</dl>
+<p>ConvertImplementation serializes and deserializes
+:param Type[AbstractConverter] ConverterImplementation: The converter class that</p>
+<blockquote>
+<div><p>implements the interface.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.context_ioc.BALIoCContextFactory.register_analyzer">
+<code class="sig-name descname">register_analyzer</code><span class="sig-paren">(</span><em class="sig-param">AbstractAnalyzer</em>, <em class="sig-param">AnalyzerImplementation</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context_ioc.BALIoCContextFactory.register_analyzer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register an anlyzer implementation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>AbstractAnalyzer</strong> (<em>Type</em><em>[</em><a class="reference internal" href="#bal.context_ioc.AbstractAnalyzer" title="bal.context_ioc.AbstractAnalyzer"><em>AbstractAnalyzer</em></a><em>]</em>) – The analyzer interface for which an
+implementation is registered.</p></li>
+<li><p><strong>AnalyzerImplementation</strong> (<em>Type</em><em>[</em><a class="reference internal" href="#bal.context_ioc.AbstractAnalyzer" title="bal.context_ioc.AbstractAnalyzer"><em>AbstractAnalyzer</em></a><em>]</em>) – The analyzer class that
+implements the interface.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.context_ioc.BALIoCContextFactory.register_modifier">
+<code class="sig-name descname">register_modifier</code><span class="sig-paren">(</span><em class="sig-param">AbstractModifier</em>, <em class="sig-param">ModifierImplementation</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.context_ioc.BALIoCContextFactory.register_modifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a modifier implementation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>AbstractModifier</strong> (<em>Type</em><em>[</em><a class="reference internal" href="#bal.context_ioc.AbstractModifier" title="bal.context_ioc.AbstractModifier"><em>AbstractModifier</em></a><em>]</em>) – The modifier interface for which an
+implementation is registered.</p></li>
+<li><p><strong>ModifierImplementation</strong> (<em>Type</em><em>[</em><a class="reference internal" href="#bal.context_ioc.AbstractModifier" title="bal.context_ioc.AbstractModifier"><em>AbstractModifier</em></a><em>]</em>) – The modifier interface for which an
+implementation is registered.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bal.data_model">
+<span id="bal-data-model"></span><h2>bal.data_model<a class="headerlink" href="#module-bal.data_model" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bal.data_model.DataModel">
+<em class="property">class </em><code class="sig-prename descclassname">bal.data_model.</code><code class="sig-name descname">DataModel</code><a class="headerlink" href="#bal.data_model.DataModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Generic" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.Generic</span></code></a></p>
+<p>A data model defines the structure of data. This is an abstract definition that must be
+implemented for specific data types.</p>
+<dl class="method">
+<dt id="bal.data_model.DataModel.get_implementation">
+<code class="sig-name descname">get_implementation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.DataModel.get_implementation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the implementation of the model. By default, it returns the class name of the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_model.DataModel.get_description">
+<code class="sig-name descname">get_description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.DataModel.get_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a description of the data represented by the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_model.DataModel.iterate">
+<em class="property">abstract </em><code class="sig-name descname">iterate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.DataModel.iterate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an iterator of direct children. Each item is a tuple in which the fist value is
+the key/index of the child and the second value is the child.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Iterator[(Any, T)]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bal.data_model.ClassModel">
+<em class="property">class </em><code class="sig-prename descclassname">bal.data_model.</code><code class="sig-name descname">ClassModel</code><span class="sig-paren">(</span><em class="sig-param">getters</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.ClassModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bal.data_model.DataModel" title="bal.data_model.DataModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">bal.data_model.DataModel</span></code></a></p>
+<p>An abstract definition of a data model targeting classes. It is useful when representing
+the model as a Python class, providing the iterate implementation. Any setters defined by the
+child class should set <code class="xref py py-attr docutils literal notranslate"><span class="pre">self._synced</span></code> to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>getters</strong> (<em>List</em><em>[</em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>,</em><em>Callable</em><em>[</em><em>[</em><em>]</em><em>,</em><em>T</em><em>]</em><em>]</em><em>]</em>) – A list of getters for the
+properties defined by the child class. Each item in the list is a tuple, the first item
+is the name of the property, the second item is the getter.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="bal.data_model.ClassModel.iterate">
+<code class="sig-name descname">iterate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.ClassModel.iterate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an iterator for the object’s properties. Each item is a tuple in which the fist
+value is property name and the second value is the child.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Iterator[Tuple[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a>, T]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bal.data_model.ValueModel">
+<em class="property">class </em><code class="sig-prename descclassname">bal.data_model.</code><code class="sig-name descname">ValueModel</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">value_name=None</em>, <em class="sig-param">value_description=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.ValueModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bal.data_model.DataModel" title="bal.data_model.DataModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">bal.data_model.DataModel</span></code></a></p>
+<p>An implementation of a data model that contains a single value with no children. It also
+wraps documentation for value’s name and description (ie value 0x2 is named “FOO” and its
+description is “The bitstream targets the FOO device”).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>Any</em>) – The value wrapped by the model. It should be a native value (ie str, int,
+bytes etc…)</p></li>
+<li><p><strong>value_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – A name for the value wrapped by the data object.</p></li>
+<li><p><strong>value_description</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – A description for the value wrapped by the data object</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="bal.data_model.ValueModel.type">
+<code class="sig-name descname">type</code><em class="property"> = 'Value'</em><a class="headerlink" href="#bal.data_model.ValueModel.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bal.data_model.ValueModel.get_value">
+<code class="sig-name descname">get_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.ValueModel.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value wrapped by the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_model.ValueModel.set_value">
+<code class="sig-name descname">set_value</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.ValueModel.set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value wrapped by the model. The model is marked as out of synch so that it is
+repacked when <cite>pack()</cite> is called on the parent data object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Any</em>) – The updated value wrapped by the model</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bal.data_model.ValueModel" title="bal.data_model.ValueModel">ValueModel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_model.ValueModel.iterate">
+<code class="sig-name descname">iterate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.ValueModel.iterate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an empty iterator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Iterator[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bal.data_model.DictModel">
+<em class="property">class </em><code class="sig-prename descclassname">bal.data_model.</code><code class="sig-name descname">DictModel</code><span class="sig-paren">(</span><em class="sig-param">attributes</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.DictModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bal.data_model.DataModel" title="bal.data_model.DataModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">bal.data_model.DataModel</span></code></a></p>
+<p>A DataModel implementation that wraps a generic Python dict. Just like regular Python
+dictionary, it should be avoided as when the value types change as the typing information is
+lost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>attributes</strong> (<em>OrderedDict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>,</em><em>T</em><em>]</em>) – The dict data wrapped by the model.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="bal.data_model.DictModel.iterate">
+<code class="sig-name descname">iterate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.DictModel.iterate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an iterator of the dictionary items. Each item is a tuple in which the fist
+value is the key of the child and the second value is the child.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Iterator[Tuple[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a>, T]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_model.DictModel.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.DictModel.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a value from the dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>T</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bal.data_model.ArrayModel">
+<em class="property">class </em><code class="sig-prename descclassname">bal.data_model.</code><code class="sig-name descname">ArrayModel</code><span class="sig-paren">(</span><em class="sig-param">items</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.ArrayModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bal.data_model.DataModel" title="bal.data_model.DataModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">bal.data_model.DataModel</span></code></a></p>
+<p>A DataModel implementation that wraps a generic Python list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>items</strong> (<em>List</em><em>[</em><em>T</em><em>]</em>) – The array wrapped by the model</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="bal.data_model.ArrayModel.iterate">
+<code class="sig-name descname">iterate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.ArrayModel.iterate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an iterator of the array items. Each item is a tuple in which the fist
+value is the index of the child and the second value is the child.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Iterator[Tuple[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)">int</a>, T]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_model.ArrayModel.insert">
+<code class="sig-name descname">insert</code><span class="sig-paren">(</span><em class="sig-param">index</em>, <em class="sig-param">object</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.ArrayModel.insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert an item at a given position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – The index at which the item should be added</p></li>
+<li><p><strong>object</strong> (<em>T</em>) – The item to add.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_model.ArrayModel.append">
+<code class="sig-name descname">append</code><span class="sig-paren">(</span><em class="sig-param">object</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.ArrayModel.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an item at the end of the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>object</strong> (<em>T</em>) – The item to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_model.ArrayModel.pop">
+<code class="sig-name descname">pop</code><span class="sig-paren">(</span><em class="sig-param">index=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_model.ArrayModel.pop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the item at the given position in the list, and return it. If no index is
+specified, a.pop() removes and returns the last item in the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a><em>]</em>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>T</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bal.data_object">
+<span id="bal-data-object"></span><h2>bal.data_object<a class="headerlink" href="#module-bal.data_object" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bal.data_object.DataObject">
+<em class="property">class </em><code class="sig-prename descclassname">bal.data_object.</code><code class="sig-name descname">DataObject</code><span class="sig-paren">(</span><em class="sig-param">context</em>, <em class="sig-param">converter</em>, <em class="sig-param">ModelInterface</em>, <em class="sig-param">model=None</em>, <em class="sig-param">bytes=None</em>, <em class="sig-param">bit_size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Generic" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.Generic</span></code></a></p>
+<p>The data object wraps either bytes or a model or both. Note that a data object does not
+define the structure of the data that it wraps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>context</strong> (<a class="reference internal" href="#bal.context_ioc.BALIoCContext" title="bal.context_ioc.BALIoCContext"><em>BALIoCContext</em></a>) – The model wrapped by the data object</p></li>
+<li><p><strong>model</strong> (<em>T</em>) – The model wrapped by the data object</p></li>
+<li><p><strong>bytes</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.7)"><em>bytes</em></a>) – The bytes wrapped by the data object.</p></li>
+<li><p><strong>converter</strong> (<a class="reference internal" href="#bal.context_ioc.AbstractConverter" title="bal.context_ioc.AbstractConverter"><em>AbstractConverter</em></a>) – The converter used to convert the model to bytes and back.</p></li>
+<li><p><strong>bit_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – The number of bits in the bytes. If the value is not provided,
+it is calculated from the bytes property.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="bal.data_object.DataObject.create_unpacked">
+<em class="property">static </em><code class="sig-name descname">create_unpacked</code><span class="sig-paren">(</span><em class="sig-param">context</em>, <em class="sig-param">model</em>, <em class="sig-param">bit_size=None</em>, <em class="sig-param">bytes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.create_unpacked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new unpacked data object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>context</strong> (<a class="reference internal" href="#bal.context_ioc.BALIoCContext" title="bal.context_ioc.BALIoCContext"><em>BALIoCContext</em></a>) – The model wrapped by the data object.</p></li>
+<li><p><strong>model</strong> (<em>T</em>) – The model wrapped by the data object.</p></li>
+<li><p><strong>bit_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – If the value is not provided, it is calculated from the bytes property
+after the object is packed.</p></li>
+<li><p><strong>bytes</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.7)"><em>bytes</em></a>) – The bytes wrapped by the data object.</p></li>
+</ul>
+</dd>
+</dl>
+<p>:rtype DataObject[T]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.create_packed">
+<em class="property">static </em><code class="sig-name descname">create_packed</code><span class="sig-paren">(</span><em class="sig-param">context</em>, <em class="sig-param">bytes</em>, <em class="sig-param">ModelInterface</em>, <em class="sig-param">converter_args=()</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.create_packed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new packed data object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>context</strong> (<a class="reference internal" href="#bal.context_ioc.BALIoCContext" title="bal.context_ioc.BALIoCContext"><em>BALIoCContext</em></a>) – The model wrapped by the data object.</p></li>
+<li><p><strong>bytes</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.7)"><em>bytes</em></a>) – The bytes wrapped by the data object.</p></li>
+<li><p><strong>ModelInterface</strong> (<em>Type</em><em>[</em><em>T</em><em>]</em>) – The interface for the model wrapped by the data object.</p></li>
+<li><p><strong>converter_args</strong> (<em>Any</em>) – Extra arguments to provide to the converter.</p></li>
+</ul>
+</dd>
+</dl>
+<p>:rtype DataObject[T]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.is_unpacked">
+<code class="sig-name descname">is_unpacked</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.is_unpacked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the DataObject has been unpacked (or was created unpacked)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.is_packed">
+<code class="sig-name descname">is_packed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.is_packed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the DataObject has been packed (or was created packed)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.is_convertible">
+<code class="sig-name descname">is_convertible</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.is_convertible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the DataObject can be unpacked/packed, false otherwise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.get_bit_size">
+<code class="sig-name descname">get_bit_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.get_bit_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of bits making up the packed data object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.get_model_type">
+<code class="sig-name descname">get_model_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.get_model_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the type of the model wrapped by the data object. The type is akin to the name of the
+interface implemented by the data model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.get_model_implementation">
+<code class="sig-name descname">get_model_implementation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.get_model_implementation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the implementation of the model wrapped by the data object. The implementation is
+akin to the class name of the data model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.get_model_description">
+<code class="sig-name descname">get_model_description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.get_model_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a description of the data model wrapped by the data object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.get_bytes">
+<code class="sig-name descname">get_bytes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.get_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the bytes for the data object. This value may be outdated if pack hasn’t been
+called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.7)">bytes</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – If the data object is not packed.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – If the data object’s bytes are out of sync with the model.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.set_bytes">
+<code class="sig-name descname">set_bytes</code><span class="sig-paren">(</span><em class="sig-param">data_bytes</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.set_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the bytes representation of the data object’s model. The bytes must represent the
+current values of the model as it is marked as synced.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_bytes</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.7)"><em>bytes</em></a>) – The byte representation of the data object’s model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.get_model">
+<code class="sig-name descname">get_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.get_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model for the data object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>T</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – If the data object is not unpacked.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.set_model">
+<code class="sig-name descname">set_model</code><span class="sig-paren">(</span><em class="sig-param">model</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.set_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the model for the data object. If a model did not exist, it’s assumed the model
+corresponds to the data object bytes and it is marked as synced. If a model did exist,
+it’s assumed the updated model is a modification of the previous one and it is marked as
+unsynced.</p>
+<p>These assumptions can be invalid if we are reverting a model to its original value. In
+that case, the model would be unnecessarily repacked.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> (<em>T</em>) – The unpacked data.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bal.data_object.DataObject" title="bal.data_object.DataObject">DataObject</a>[T]</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – If the provided model is not an instance of DataModel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.unpack">
+<code class="sig-name descname">unpack</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.unpack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and store a data model from the bytes stored on the data object. It is a noop if
+the data model is already unpacked.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>T</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – If the data object is not convertible (ie no <code class="xref py py-class docutils literal notranslate"><span class="pre">Converter</span></code>
+is set for the <code class="xref py py-class docutils literal notranslate"><span class="pre">DataObjectModel</span></code>).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.unpack_all">
+<code class="sig-name descname">unpack_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.unpack_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recursively unpack all data object contained by the data model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>T</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.pack">
+<code class="sig-name descname">pack</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.pack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and store a bytes representation of the data model stored on the data object. It
+is a noop if the data object is marked as synced or if it is not unpacked. The call to
+<cite>Converter.pack()</cite> usually means that the <cite>pack()</cite> method will be called recursively on
+all descendants that are out of sync.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.7)">bytes</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)">bool</a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – If the data object is not convertible (ie no <code class="xref py py-class docutils literal notranslate"><span class="pre">Converter</span></code>
+is set for data object).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.synchronize">
+<code class="sig-name descname">synchronize</code><span class="sig-paren">(</span><em class="sig-param">force_desync=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.synchronize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensure that for a given data object, it is marked as out of sync if any of its
+descendants are marked as out of sync. This check is performed recursively for each
+descendant of the data object.</p>
+<p>This method should be called before calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectModel.pack()</span></code> to make sure that
+out of sync descendants get repacked.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>force_desync</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – If set to true, mark all children data object as out of sync.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bal.data_object.DataObject.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><em class="sig-param">indent_count=0</em>, <em class="sig-param">indent_size=2</em>, <em class="sig-param">recurse=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bal.data_object.DataObject.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a string representation of the data object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>indent_count</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – The number of indents to use when rendering the object</p></li>
+<li><p><strong>indent_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – The size (in spaces) of an indent</p></li>
+<li><p><strong>recurse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – If False, does not include child data in the string representation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bal.analyzers.html" class="btn btn-neutral float-right" title="bal.analyzers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to BAL’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, RBS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
