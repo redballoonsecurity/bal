@@ -21,6 +21,11 @@ It defines 3 broad categories of operations on the tree: **convert**, **analyze*
 
 ## Installation
 
+The BAL package can be installed from PyPi with the following command:
+```
+pip install bal
+```
+
 To install the BAL module from the repository, clone the repo and run:
 
 ```
@@ -39,12 +44,6 @@ To install the core BAL module as well as dependencies for the example, run:
 ```
 pip install .[examples]
 ```
-
-The BAL package can also be installed from PyPi with the following command:
-```
-pip install bal
-```
-
 
 ## Concepts
 
