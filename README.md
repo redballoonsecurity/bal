@@ -87,7 +87,7 @@ In addition, the BAL framework defines a few interfaces:
   context factories
 
 The full documentation for the API is available on 
- [github.io](https://ballon-rouge.github.io/bal/)
+ [github.io](https://redballoonsecurity.github.io/bal-visualizer/)
 
 
 
